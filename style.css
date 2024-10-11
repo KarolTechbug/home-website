@@ -1,0 +1,104 @@
+/* Ogólne ustawienia */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+/* Sekcja profilu */
+.profile-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 10px;
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+/* Galeria z dwoma elementami */
+.gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 900px;
+}
+
+/* Każdy element galerii */
+.gallery-item {
+    text-align: center;
+    flex: 1;
+    min-width: 200px;
+}
+
+.image-box {
+    width: 100%;
+    max-width: 300px;
+    height: 300px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    margin: 10px 0;
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-item:hover .image-box {
+    transform: scale(1.05);
+}
+
+/* Podpisy nad i pod obrazami */
+.description-top,
+.description-bottom {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Szary pionowy pasek */
+.divider {
+    width: 2px;
+    background: linear-gradient(to top, rgba(0,0,0,0), #ccc, rgba(0,0,0,0));
+    height: 80%;
+    min-height: 300px;
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+    .gallery {
+        flex-direction: column;
+    }
+
+    .divider {
+        display: none;
+    }
+}
